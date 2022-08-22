@@ -46,7 +46,9 @@ module.exports = {
       remotes: {
         login: "login@http://localhost:8081/remoteEntry.js"
       },
-      exposes: {},
+      exposes: {
+        "./MyProvider": './src/MyProvider.tsx'
+      },
       shared: {
         ...deps,
         react: {

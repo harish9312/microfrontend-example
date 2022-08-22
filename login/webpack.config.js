@@ -43,9 +43,11 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "login",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        MyProvider: "my-provider@http://locahost:8080/remoteEntry.js"
+      },
       exposes: {
-        "./Login": "./src/Login.tsx"
+        "./Login": "./src/Components.tsx"
       },
       shared: {
         ...deps,
